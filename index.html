@@ -6,15 +6,57 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>CodingCamp-290925-Ozzi
    </title>
-   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   <script src="https://cdn.tailwindcss.com"></script>
+
    <link rel="stylesheet" href="style\style.css">
 </head>
 
-<body>
-   <header>
-      <p class="text-3xl ">Hello World</p>
-   </header>
+<body class="bg-slate-900 flex items-center justify-center h-screen text-white">
+
+   <div class="bg-slate-800 p-6 rounded-xl shadow-lg w-[500px]">
+      <h2 class="text-center text-2xl font-bold mb-5">Todo List</h2>
+
+      <!-- Bagian Row -->
+      <div class="flex gap-2 mb-4">
+         <input id="taskInput" type="text" placeholder="Tambah Task"
+            class="h-9 flex-1 px-3 py-2 rounded-md border border-gray-400 bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+
+         <input id="dateInput" type="date"
+            class="h-9 px-3 py-2 rounded-md border border-gray-400 bg-white text-black focus:outline-none focus:ring-2 focus:ring-indigo-500" />
+
+         <button id="addBtn" class="bg-indigo-500 hover:bg-indigo-600 px-4 py-2 rounded-md font-bold">+</button>
+      </div>
+
+      <!-- Bagian Button -->
+      <div class="flex justify-between mb-4">
+         <button class="btntl h-9 bg-indigo-500 hover:bg-indigo-600 px-4 py-2 rounded-md font-bold">FILTER</button>
+         <button id="deleteAllBtn" class="btntl h-9 bg-indigo-500 hover:bg-indigo-600 px-4 py-2 rounded-md font-bold">DELETE ALL</button>
+      </div>
+
+      <!-- Bagian Table -->
+      <div class="overflow-x-auto">
+         <table class="w-full border-collapse text-sm">
+            <thead>
+               <tr class="bg-slate-900">
+                  <th class="py-2 px-3 text-left">TASK</th>
+                  <th class="py-2 px-3 text-left">DUE DATE</th>
+                  <th class="py-2 px-3 text-left">STATUS</th>
+                  <th class="py-2 px-3 text-left">ACTION</th>
+               </tr>
+            </thead>
+            <tbody id="taskTableBody">
+               <tr class="bg-slate-950 text-gray-400 text-center">
+                  <td colspan="4" class="py-3">No task found</td>
+               </tr>
+            </tbody>
+         </table>
+      </div>
+   </div>
    <script src="js\script.js"></script>
+   <footer class="absolute bottom-4 w-full text-center text-gray-400 text-sm">
+    <p>© 2025 Todo List App | By Ozzi Arhiyanto</p>
+  </footer>
 </body>
+
 
 </html>

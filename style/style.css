@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+body {
+  background-color: #0f172a; /* dark navy */
+  font-family: Arial, sans-serif;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.btntl{
+  letter-spacing: 1px;
+  font-size: 12px;
+  font-weight: 600;
+  
+}
+
+
+
+
